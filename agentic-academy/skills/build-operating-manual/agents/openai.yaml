@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Operating Manual"
+  short_description: "Generate project operating instructions"
+  default_prompt: "Use $build-operating-manual to scan this project and propose CLAUDE.md and AGENTS.md."
