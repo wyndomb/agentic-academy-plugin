@@ -1,0 +1,12 @@
+{
+  "name": "agentic-academy",
+  "displayName": "Agentic Academy",
+  "version": "1.1.0",
+  "description": "The Agentic Academy toolkit for knowledge workers: set up a Claude Code project from your chat history or an interview, find what to automate next, improve and audit project instructions, plan and build, create and audit skills, turn corrections into rules, review memory, build subagents, and copy skills into a project. Start with /agentic-academy:academy-guide.",
+  "author": {
+    "name": "Wyndo",
+    "url": "https://theaimaker.substack.com"
+  },
+  "keywords": ["agentic-academy", "claude-code", "knowledge-work", "onboarding", "skills", "rules", "subagents"],
+  "license": "UNLICENSED"
+}

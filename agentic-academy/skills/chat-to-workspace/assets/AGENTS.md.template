@@ -1,0 +1,50 @@
+# AGENTS.md — [Project / Person name] Workspace
+
+Last updated: [date]
+
+This is the portable agent-instructions file (the Codex / open-standard counterpart to
+CLAUDE.md). Codex and other agents read AGENTS.md first; Claude Code reads CLAUDE.md.
+Keep the two in sync — same substance, so the workspace transfers between tools without
+re-teaching the agent who you are.
+
+> Generation note: produce this alongside CLAUDE.md with identical content. The only
+> differences are the filename and this header. If you update one, update the other.
+
+## What this project is
+
+- Who I am: [role(s) and domain, one line]
+- What this workspace is for: [the main work this folder supports]
+- Who the work serves: [audience / clients / stakeholders]
+- What I'm trying to grow or improve: [current goal]
+
+## What good work looks like
+
+[3-5 bullets describing quality for this person's work — drawn from their actual standards,
+not generic ones.]
+
+## What to avoid
+
+[3-5 things this person consistently does NOT want — pulled from their corrections and
+patterns.]
+
+## How to make decisions
+
+[3-5 decision rules. See context/decision-rules.md for detail.]
+
+## Where to find context (routing table)
+
+Read the right file for the task instead of loading everything:
+
+| When the task involves... | Read |
+|---------------------------|------|
+| Who I am / my work        | context/operator-profile.md |
+| Writing in my voice       | context/voice-and-style.md |
+| How I make calls          | context/decision-rules.md |
+| My topics, tools, people  | context/domain-map.md |
+| The project I'm building  | project/project-brief.md |
+| My real source material   | material/ (see material/README.md) |
+| Skills I can run          | .claude/skills/ (and AGENTS-compatible runners) |
+
+## Most important files
+
+[List the 3-5 files the agent should almost always know about for this person's work.]

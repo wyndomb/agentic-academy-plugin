@@ -1,0 +1,18 @@
+{
+  "name": "ai-maker",
+  "description": "Plugins from The AI Maker and Agentic Academy.",
+  "owner": {
+    "name": "Wyndo",
+    "url": "https://theaimaker.substack.com"
+  },
+  "plugins": [
+    {
+      "name": "agentic-academy",
+      "source": "./agentic-academy",
+      "displayName": "Agentic Academy",
+      "description": "Thirteen skills for setting up and improving your Claude Code work system. Start with /agentic-academy:academy-guide.",
+      "category": "productivity",
+      "keywords": ["agentic-academy", "onboarding", "knowledge-work"]
+    }
+  ]
+}
