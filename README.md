@@ -42,197 +42,70 @@ To confirm it worked, run `claude plugin list` in a terminal. You should see `ag
 
 Both routes end in the same place. The menu is there for when you do not know the names yet.
 
-## Which skill do I need?
+## Skills
 
-| You are thinking... | Use |
+Every skill is called as `/agentic-academy:<name>`, or reached by describing the need. Names link to the skill's folder.
+
+### Start here
+
+| Skill | Use when |
 | --- | --- |
-| "I want to get set up and I have a ChatGPT or Claude export" | `chat-to-workspace` |
-| "I want to get set up but I would rather just talk" | `interview-to-workspace` |
-| "What should I automate next?" | `knowledge-worker-automation-recommender` |
-| "This project has no CLAUDE.md. Write one from what is here." | `build-operating-manual` |
-| "I have a CLAUDE.md. How do I make it better?" | `claude-md-upgrader` |
-| "My CLAUDE.md feels bloated or contradicts itself" | `audit-claude-md` |
-| "This is a big project. Plan it properly and let me resume later." | `plan-and-execute` |
-| "Which of my repeated tasks should become skills?" | `skill-finder` |
-| "The wrong skill keeps firing" or "I have too many skills" | `audit-skills` |
-| "I keep correcting the same thing" | `rule-builder` |
-| "What does Claude remember about me?" | `memory-review` |
-| "I want a separate helper for this one job" or "a review panel" | `subagent-builder` |
-| "Copy my installed skills into this project" | `sync-skills` |
+| [`/agentic-academy:academy-guide`](agentic-academy/skills/academy-guide) | **Read first** when you do not know which skill you need. Shows thirteen options in plain language, asks one question if your request could go two ways, then hands off to the right skill with your goal and files carried along. Does no work itself. |
 
-Three of these deal with project instructions, and the line between them matters. `build-operating-manual` creates `CLAUDE.md` and `AGENTS.md` as a pair from scratch, with a proposal first. `claude-md-upgrader` improves a `CLAUDE.md` you already have. `audit-claude-md` gives a verdict on one without changing it. If you are unsure, the menu will ask you one question and route you.
+### Get set up
 
-## The skills in detail
+| Skill | Use when |
+| --- | --- |
+| [`/agentic-academy:chat-to-workspace`](agentic-academy/skills/chat-to-workspace) | A **Claude or ChatGPT history export** (the full export file, not one pasted chat) → a project folder with `CLAUDE.md`, context files on who you are and how you work, a Chat X-Ray report on your patterns, a recommended first project, and one starter skill. Needs `python3`. |
+| [`/agentic-academy:interview-to-workspace`](agentic-academy/skills/interview-to-workspace) | **No export**, or you would rather **talk than hand over chat history** → the same project folder, built from an interview about your real work, plus a work portrait report. Never asks for an export first. |
 
-Each entry says what the skill does, when to reach for it, what you might say, what you get back, and what it will not do.
+### Project instructions
 
-### academy-guide
+| Skill | Use when |
+| --- | --- |
+| [`/agentic-academy:build-operating-manual`](agentic-academy/skills/build-operating-manual) | **No `CLAUDE.md` yet**, or one file without its `AGENTS.md` twin → a content-free scan, a proposal marking each claim observed / inferred / unknown, then both files written as a matched pair after you approve. Never writes before approval. Needs `python3`. |
+| [`/agentic-academy:claude-md-upgrader`](agentic-academy/skills/claude-md-upgrader) | An **existing `CLAUDE.md` that feels thin or stale** → 5 to 10 ranked upgrade ideas across `CLAUDE.md`, `AGENTS.md`, rules, and skills, then patches for the ones you pick. Can draft a first `CLAUDE.md` alone when that single file is all you want. Does not find new skills. |
+| [`/agentic-academy:audit-claude-md`](agentic-academy/skills/audit-claude-md) | A `CLAUDE.md` that is **bloated, contradictory, or untouched since a model change** → one verdict per instruction (Keep, Rewrite, Move, Test, or Retire), each with evidence. Judges only; does not create or edit. Needs `python3`. |
 
-The menu. Shows thirteen options in plain language, asks one question if your request could go two ways, then hands off to the right skill with your goal and files carried along.
+Three skills, one line between them: no file yet, use `build-operating-manual`; a file you want better, use `claude-md-upgrader`; a file you want judged, use `audit-claude-md`.
 
-**Reach for it when** you do not know the skill names, or want to see what is possible.
+### Skills, rules, and helpers
 
-**Try saying** `/agentic-academy:academy-guide`, or "what can the Academy tools help me with?"
+| Skill | Use when |
+| --- | --- |
+| [`/agentic-academy:knowledge-worker-automation-recommender`](agentic-academy/skills/knowledge-worker-automation-recommender) | **"What should I automate next?"** on a project with real files → ranked recommendations across connected tools, skills, guardrails, subagents, and bundles, each tied to something it saw in your folders. Read-only; pick one and the menu carries it into the right builder. |
+| [`/agentic-academy:skill-finder`](agentic-academy/skills/skill-finder) | **"What should I turn into a skill?"** → reads the whole project, inventories what is already automated, returns a ranked list of repeated tasks worth packaging, then writes `SKILL.md` files for the ones you choose. New skills only. |
+| [`/agentic-academy:audit-skills`](agentic-academy/skills/audit-skills) | The **wrong skill keeps firing**, one never triggers, two overlap, or the folder has gone stale → a trigger map plus Keep, Clarify, Manual only, Merge, Test, or Archive per skill. Does not build. Needs `python3`. |
+| [`/agentic-academy:rule-builder`](agentic-academy/skills/rule-builder) | You have **said the same correction twice** → checks whether it belongs in a rule, `CLAUDE.md`, memory, or just today's task; when a rule fits, writes a scoped file in `.claude/rules/` that loads only for matching work. |
+| [`/agentic-academy:subagent-builder`](agentic-academy/skills/subagent-builder) | You want a **separate helper for one defined job**, or a **review panel** → reads the project, suggests helpers, interviews you on the handoff, writes files in `.claude/agents/`; panel mode adds the skill that runs them together. |
 
-**You get** the menu, then whatever the chosen skill produces.
+### Plan, memory, and housekeeping
 
-**It will not** do any work itself. It only routes.
+| Skill | Use when |
+| --- | --- |
+| [`/agentic-academy:plan-and-execute`](agentic-academy/skills/plan-and-execute) | A job **too big for one sitting** (research, a content series, an ops overhaul, a bounded build) → an interview-led `plan.md` for approval and a `progress.md` record; work runs one approved milestone at a time and resumes across sessions. |
+| [`/agentic-academy:memory-review`](agentic-academy/skills/memory-review) | **"What do you remember about me?"**, or a saved correction did not stick → a report of project and user-level memory, then one decision per stale, duplicated, or contradicted item for you to approve. Does not audit `CLAUDE.md`, rules, or skills. Needs `python3`. |
+| [`/agentic-academy:sync-skills`](agentic-academy/skills/sync-skills) | You want a project to **carry its own copies** of your installed skills → editable copies in that project's `.claude/skills/`. One-time copy; re-run to refresh. |
 
-### chat-to-workspace
+### Example prompts
 
-Reads a full Claude or ChatGPT history export and builds a Claude Code project folder from what it finds: who you are, how you work, what you keep asking for.
+```text
+Using /agentic-academy:academy-guide, help me work out where to start.
+```
 
-**Reach for it when** you are starting from nothing and you have an export.
+```text
+My CLAUDE.md feels bloated and contradicts itself.
+```
 
-**Try saying** "I exported my ChatGPT conversations, set up my Claude Code folder," or "run the Chat X-Ray on this export."
+```text
+I keep telling Claude to put the action items first in client reports.
+```
 
-**You get** a project folder with `CLAUDE.md`, context files (operator profile, voice, decision rules, domain map), a place for your real material, a Chat X-Ray report on your patterns, a recommended first project, and one starter skill.
+```text
+Interview me and build my project folder.
+```
 
-**It will not** work from a single pasted conversation. It needs the full export file. Parsing the export uses a bundled Python script, so `python3` needs to be available.
-
-### interview-to-workspace
-
-The same project folder as above, built from a conversation instead of an export. It asks about your real work, then writes the files.
-
-**Reach for it when** you have no export, or you would rather not hand over your chat history. Both are equally good reasons.
-
-**Try saying** "interview me and build my project folder," or "I don't have a chat export, get me set up."
-
-**You get** a project folder with `CLAUDE.md` and `AGENTS.md`, context files, a material space, a work portrait report, a recommended first project, and one starter skill.
-
-**It will not** ask you to produce an export first.
-
-### knowledge-worker-automation-recommender
-
-Looks at how you actually work (your folders, filenames, the kinds of documents you keep) and recommends what to set up next: connected tools, reusable skills, guardrails, specialist helpers, or bundles. Built for writers, consultants, founders, analysts, and operators, not for codebases.
-
-**Reach for it when** you have a project with real files in it and want broad advice on what would help most.
-
-**Try saying** "look at my project and tell me what to automate," or "how do I get more out of Claude Code for my client work?"
-
-**You get** a ranked set of recommendations in plain language, each tied to something it saw in your files.
-
-**It will not** build anything. It reads and recommends. Pick one recommendation and the menu carries it into the right builder.
-
-### build-operating-manual
-
-Scans a project without reading private file contents, samples a few representative files, and works out the project's core job: the Work it repeats, the Input it needs, the Output it produces, and the Key Standard the output must pass. It shows you a proposal with every claim marked observed, inferred, or unknown. After you approve, it writes `CLAUDE.md` and `AGENTS.md` as a matched pair so both Claude and Codex read the same project truth.
-
-**Reach for it when** a project has no instruction files yet, or has one without the other, and you want them written from evidence rather than from a template.
-
-**Try saying** "this project has no CLAUDE.md, write one from what is here," or "create the operating manual for this folder."
-
-**You get** the proposal first, then both files, each with the same five blocks: Orient, Guardrails, Playbooks, Routing, Map.
-
-**It will not** write before you approve the proposal, copy anything personal or sensitive into the files, or overwrite a mature instruction file silently. The scan uses a bundled Python script.
-
-### claude-md-upgrader
-
-Reads a knowledge-work project and returns 5 to 10 ranked ways to improve its `CLAUDE.md`, `AGENTS.md`, rules, or skills. Pick the ones you want and it applies them. It can also draft a first `CLAUDE.md` alone when that single file is all you need.
-
-**Reach for it when** you already have a `CLAUDE.md` and it feels thin, generic, or out of date.
-
-**Try saying** "improve my CLAUDE.md," "is my CLAUDE.md any good?", or "set up my project home base."
-
-**You get** a ranked list of upgrades with the reasoning visible, then targeted patches for the ones you choose.
-
-**It will not** find new skills (that is `skill-finder`) or mine your chat history for lessons.
-
-### audit-claude-md
-
-Audits an existing instruction setup and gives each instruction an evidence-backed verdict: Keep, Rewrite, Move, Test, or Retire. Useful after a model change, a tool change, or when a file has grown by accretion.
-
-**Reach for it when** your `CLAUDE.md` feels bloated, contradicts itself, or has lines you suspect no longer do anything.
-
-**Try saying** "audit my CLAUDE.md," "I switched models, check my setup," or "which of these instructions can I delete?"
-
-**You get** a report with one call per instruction and the evidence behind it. Some findings include a quick test you can run to check whether an instruction still matters.
-
-**It will not** create a first `CLAUDE.md`, audit skill routing, or edit anything without approval. Bundled scripts need `python3`.
-
-### plan-and-execute
-
-Turns a substantial project into two files: `plan.md` (the approved plan, milestone by milestone) and `progress.md` (what is done, what is next). Work proceeds one approved milestone at a time, with verification and a self-check before each report, so you can close the session and pick up later without losing the thread.
-
-**Reach for it when** the job is too big for one sitting: a research project, a content series, an operations overhaul, a bounded build.
-
-**Try saying** "plan this out properly," "let's build this in milestones," or "resume my plan."
-
-**You get** an interview-led plan for approval, then execution and a running progress record.
-
-**It will not** skip the approval step or run past one milestone without checking in. If you already have a spec, it asks which document governs before writing a plan.
-
-### skill-finder
-
-Reads a whole project, works out what it actually produces, checks what is already automated, and returns a ranked list of repeated tasks worth turning into new skills. Pick the ones you want and it writes real `SKILL.md` files for them.
-
-**Reach for it when** you suspect you keep doing the same thing by hand and want to know which of those are worth packaging.
-
-**Try saying** "what should I turn into a skill?", "scan my project for skill opportunities," or "what can I automate here?"
-
-**You get** a short ranked list with the reasoning shown, then skill files for the ones you choose.
-
-**It will not** improve, audit, or upgrade skills that already exist. That is `audit-skills`.
-
-### audit-skills
-
-Audits the skills you already have. Builds a trigger map showing what each skill fires on, then gives each one a call: Keep, Clarify, Manual only, Merge, Test, or Archive.
-
-**Reach for it when** Claude activates the wrong skill, misses one that should have fired, two skills overlap, or your skills folder has grown stale.
-
-**Try saying** "the wrong skill keeps firing," "audit my skills," or "I have too many skills and some overlap."
-
-**You get** the trigger map and one recommendation per skill, with evidence. Some findings include a trigger test you can run.
-
-**It will not** build new skills or edit files without approval. Bundled scripts need `python3`.
-
-### rule-builder
-
-Turns corrections you keep repeating into rules: small files in `.claude/rules/` that load only when Claude is working on matching files. Your standards for posts, client emails, or reports apply on their own, and cost nothing the rest of the time. It first checks whether the correction belongs in a rule at all, or in `CLAUDE.md`, personal context, memory, or just today's task.
-
-**Reach for it when** you have said the same thing to Claude twice.
-
-**Try saying** "I keep telling it to put action items first in client reports," "should this be a rule?", or "why isn't this instruction sticking?"
-
-**You get** a placement recommendation, and when a rule is the right home, a scoped rule file after you approve it.
-
-**It will not** write a rule for a one-off correction.
-
-### memory-review
-
-Reads Claude Code's auto memory for the current project (and the user-level layer), then audits it: stale, vague, duplicated, orphaned, misplaced, or contradicted memories each get one proposed decision. Works in the desktop app without the `/memory` terminal command.
-
-**Reach for it when** you want to know what Claude has picked up about you, or a saved correction did not stick.
-
-**Try saying** "what do you remember about me?", "review my memory," or "that saved memory is wrong."
-
-**You get** a report of what lives in memory and where, then one decision per finding for you to approve.
-
-**It will not** audit `CLAUDE.md`, rules, or skills, or edit or delete without approval. Uses a bundled Python script.
-
-### subagent-builder
-
-Interviews you and builds subagents as files in `.claude/agents/`. It reads the project first and suggests helpers based on the work that actually happens there. It can also build a panel: several subagents reviewing the same piece of work, plus a skill that runs them and combines what they return.
-
-**Reach for it when** you want to hand one defined job to a separate worker, or you want an independent review from more than one angle.
-
-**Try saying** "build me a subagent that checks my drafts for voice," "should this be a subagent?", or "I want a review panel."
-
-**You get** approved subagent files, and for a panel, the coordination skill too.
-
-**It will not** guess at a handoff. It asks what the helper needs to receive and return, because a subagent starts fresh and only sees what you pass it.
-
-### sync-skills
-
-Copies every skill you have installed into a project's `.claude/skills/` folder, so the skills travel with that project as editable, checked-in copies.
-
-**Reach for it when** you want a project to carry its own skills, for example a repo you share with someone else.
-
-**Try saying** "copy my installed skills into this project."
-
-**You get** plain copies in the project, and a list of what was copied.
-
-**It will not** keep the copies in sync afterwards. Re-run it after installing or updating skills. It verifies the source path and confirms before replacing existing copies.
+The first opens the menu. The other three go straight to `audit-claude-md`, `rule-builder`, and `interview-to-workspace` without naming them.
 
 ## Requirements
 
