@@ -2,16 +2,24 @@
 
 The person needs **one** project to build their system on — not a menu. This is the same
 three-stage framework the cohort uses in pre-work, applied here using evidence from their
-chat history instead of a blank brainstorm. Read this in Phase 3.
+chat history or their interview answers instead of a blank brainstorm. Read this in Phase 3.
 
 ## Stage 1 — Generate candidates from the evidence
 
-From `digest/samples.md` and the repeated-opener clusters, list everything the person
-*already does repeatedly* with AI. Don't filter yet. Good sources of candidates:
+List everything the person *already does repeatedly*. Don't filter yet. Where the
+candidates come from depends on the source:
+
+From a chat export (`digest/samples.md` and the repeated-opener clusters):
 - Repeated openers (high count = recurring work).
 - The longest context dumps (work important enough to re-explain at length).
 - Clusters of conversations on the same topic (a workflow split across many chats).
-- Anything they clearly do every week.
+
+From an interview:
+- The top 3-4 recurring tasks they named when walking through a normal week.
+- The tasks with the highest confirmed time-per-task x frequency.
+- Anything they said they already have a template, checklist, or standard for.
+
+Either way: anything they clearly do every week.
 
 Aim for 5-8 raw candidates.
 
@@ -22,6 +30,7 @@ Keep only candidates that pass MOST of these. Drop the rest.
 1. **Volume** — they spend real time on it (recurring in the history, not a one-off).
 2. **File-shaped output** — it produces a draft, report, brief, deliverable, or similar.
 3. **Examples exist** — they have (or can gather) ~20 examples of past work to draw on.
+   (In an interview, ask this directly; don't assume.)
 4. **Describable quality** — they can say what "good" and "bad" look like in plain words.
 5. **Real payoff** — systematizing it removes pain or frees them for better work.
 
@@ -52,8 +61,8 @@ Write the recommendation as:
 [one paragraph — the recurring work this systematizes]
 
 ## Why this one
-[the scores, briefly, and what the chat history shows about how often / how painfully
-they do this today]
+[the scores, briefly, and what the evidence (chat history or interview) shows about how
+often / how painfully they do this today]
 
 | Candidate | Time | Quality | Strategic | Total |
 |-----------|------|---------|-----------|-------|

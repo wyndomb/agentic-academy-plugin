@@ -8,8 +8,10 @@ Read this in Phase 2 (portrait) and Phase 4 (assembly).
 
 ## How to detect
 
-Read `digest/samples.md` and the repeated openers in `digest/digest.json`. Match the
-*work the person actually brings to AI*, not their job title. Signals below.
+Evidence depends on how the person arrived. From a chat export, read `digest/samples.md`
+and the repeated openers in `digest/digest.json`. From an interview, use their answers about
+their role, their normal week, and the tasks that eat the most time. Either way, match the
+*work the person actually does over and over*, not their job title. Signals below.
 
 ### Content Creator
 For newsletter writers, bloggers, podcasters, YouTubers, social writers, creators.
@@ -35,8 +37,9 @@ For analysts, researchers, project managers, team leads, corporate professionals
   decision memos, exec summaries, action items, cross-team reporting.
 - They care about: completeness, accuracy, structure, action clarity.
 
-If two fit, pick the one with more conversation volume for the scaffold; record the other
-as "secondary" in `operator-profile.md`.
+If two fit, pick the one with more volume (conversation count from an export, or hours per
+week from an interview) for the scaffold; record the other as "secondary" in
+`operator-profile.md`.
 
 ## Folder scaffolds by archetype
 

@@ -57,9 +57,21 @@ what the agent drafts toward vs. what stays the person's call.]
 
 ## Time you could get back
 
-[Lead with a headline weekly number, summed from the per-task math above and applied only to
-the share the agent takes, minus review time. One honest line that setup takes a few weeks
-before the full number lands. Same math discipline as agentic-outcome-finder Phase 3.]
+[Lead with a headline weekly range. Work it out per task, using only numbers the person
+confirmed in the interview:
+
+1. Hours per week = time-per-task x frequency (from "Where the time goes").
+2. Agent share = the mechanical-vs-judgment split they confirmed (e.g. "70% mechanical"
+   means an agent share of 0.7). If they never gave one, default by task type and say the
+   default was assumed: 0.8 for reformatting, summarizing, or first drafts from a template;
+   0.6 for drafting that needs their voice; 0.3 for judgment-heavy work.
+3. Review time = 20% of the original hours, unless they said otherwise.
+4. Time back per task = (hours x agent share) - (hours x 0.2).
+5. Sum the tasks. Show a range: the high end uses the agent share as confirmed, the low end
+   uses that share minus 0.15.
+
+Show the per-task lines and the total so they can check the arithmetic. One honest line that
+setup takes a few weeks before the full number lands. Never a single exact figure.]
 
 ## What this workspace gives you
 

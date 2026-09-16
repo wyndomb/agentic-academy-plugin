@@ -42,13 +42,10 @@ in one pass.
 
 This skill is the **first touchpoint**: it produces the Chat X-Ray report, the workspace
 scaffold, the #1 project, and **exactly one** starter skill. It deliberately does NOT try to
-be the whole suite. Hand the rest off to the later tools:
-- More skills → **Skills Library Builder** (Week 5).
-- Consolidating multi-chat workflows → **Pipeline Builder**.
-- Organizing exported data/frameworks → **Knowledge Repository Builder**.
-- Suggesting/upgrading skills → **Skill Finder / Skill Upgrader**.
+build a skill library. If the person wants more skills afterwards, point them to
+`/agentic-academy:skill-finder`.
 
-Stay in your lane: report + folder + project + one skill. Point to the others; don't build them.
+Stay in your lane: report + folder + project + one skill.
 
 ## What it produces
 
@@ -161,8 +158,8 @@ So the person doesn't arrive at Week 1 with an empty `.claude/skills/`, scaffold
 runnable skill from their most-repeated, most-systematizable task. Read
 `references/starter-skill.md`, copy `assets/starter-skill-template/SKILL.md.template` into
 `<workspace>/.claude/skills/<skill-name>/SKILL.md`, and fill it from real evidence (their
-trigger phrases, their quality bar). Keep it to ONE skill — the Skills Library Builder makes
-the rest later.
+trigger phrases, their quality bar). Keep it to ONE skill — `/agentic-academy:skill-finder`
+makes the rest later.
 
 ### Phase 4 — Assemble the folder
 
@@ -207,7 +204,7 @@ export once the digest and workspace are built.
   generic praise ("you're a strategic thinker!").
 - **Be honest about your evidence.** Say when a claim comes from memory vs. conversations,
   and when data was thin. Present the time-cost as a range, never false precision.
-- **One skill, not a library.** Resist scaffolding more than one starter skill; that's a
-  later cohort deliverable.
+- **One skill, not a library.** Resist scaffolding more than one starter skill; when they want
+  more, point them to `/agentic-academy:skill-finder`.
 - **The folder is a starting point, not a monument.** Bias toward a clean, real scaffold the
   person will actually extend over an elaborate structure they'll never touch.

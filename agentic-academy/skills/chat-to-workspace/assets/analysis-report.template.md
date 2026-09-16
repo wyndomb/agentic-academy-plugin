@@ -58,7 +58,7 @@ payoff. These become candidate skills later.]
 
 [Name the one runnable skill generated from your top pattern, the evidence it came from, and
 how to run it. Full file at .claude/skills/[name]/SKILL.md. Note that the rest of your skill
-library gets built later (Skills Library Builder).]
+library gets built later: run /agentic-academy:skill-finder when you're ready.]
 
 ## What changes now
 

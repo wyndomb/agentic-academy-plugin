@@ -12,7 +12,9 @@ Load this for any drafting, rewriting, or public-facing copy.
 [3-5 bullets — the generic/AI tics I don't want.]
 
 ## Evidence (real quotes from my chats)
-[2-4 short quotes pulled from samples.md that show my actual voice. Keep them verbatim.]
+[2-4 short quotes that show my actual voice, pulled from samples.md (chat export) or from
+the real work samples I shared (interview). Keep them verbatim. If I gave no samples, leave a
+fill-in prompt here instead of inventing quotes.]
 
 ## How I think
 [Observed reasoning patterns — e.g. "I state constraints before asking for options",
