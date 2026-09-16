@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Prompt Builder"
+  short_description: "Interview users and write finishable agent goals"
+  default_prompt: "Use $goal-prompt-builder to interview me and generate a ready-to-run goal prompt for a long-running agent task."

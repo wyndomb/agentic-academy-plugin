@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Framework Generator"
+  short_description: "Interview a user and generate a safe ready-to-run /loop prompt."
+  default_prompt: "Help me turn an existing draft, page, brief, or artifact into a ready-to-run /loop prompt with checks, stop rules, and a human gate."

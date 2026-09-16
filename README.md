@@ -1,6 +1,6 @@
 # Agentic Academy plugin
 
-Fourteen skills for Claude Code, installed as one plugin. They cover the setup work that knowledge workers keep running into: building a project folder, writing the instructions Claude reads, finding what to automate, planning a bigger build, creating and auditing skills, turning corrections into rules, reviewing memory, and building subagents.
+Sixteen skills for Claude Code, installed as one plugin. They cover the setup work that knowledge workers keep running into: building a project folder, writing the instructions Claude reads, finding what to automate, planning a bigger build, creating and auditing skills, turning corrections into rules, reviewing memory, and building subagents.
 
 Every skill runs inside your own project, reads your real files, and asks before it changes anything.
 
@@ -50,7 +50,7 @@ Every skill is called as `/agentic-academy:<name>`, or reached by describing the
 
 | Skill | Use when |
 | --- | --- |
-| [`/agentic-academy:academy-guide`](agentic-academy/skills/academy-guide) | **Read first** when you do not know which skill you need. Shows thirteen options in plain language, asks one question if your request could go two ways, then hands off to the right skill with your goal and files carried along. Does no work itself. |
+| [`/agentic-academy:academy-guide`](agentic-academy/skills/academy-guide) | **Read first** when you do not know which skill you need. Shows fourteen options in plain language, asks one question if your request could go two ways, then hands off to the right skill with your goal and files carried along. Does no work itself. |
 
 ### Get set up
 
@@ -79,11 +79,13 @@ Three skills, one line between them: no file yet, use `build-operating-manual`; 
 | [`/agentic-academy:rule-builder`](agentic-academy/skills/rule-builder) | You have **said the same correction twice** → checks whether it belongs in a rule, `CLAUDE.md`, memory, or just today's task; when a rule fits, writes a scoped file in `.claude/rules/` that loads only for matching work. |
 | [`/agentic-academy:subagent-builder`](agentic-academy/skills/subagent-builder) | You want a **separate helper for one defined job**, or a **review panel** → reads the project, suggests helpers, interviews you on the handoff, writes files in `.claude/agents/`; panel mode adds the skill that runs them together. |
 
-### Plan, memory, and housekeeping
+### Plan, hand off, and housekeeping
 
 | Skill | Use when |
 | --- | --- |
 | [`/agentic-academy:plan-and-execute`](agentic-academy/skills/plan-and-execute) | A job **too big for one sitting** (research, a content series, an ops overhaul, a bounded build) → an interview-led `plan.md` for approval and a `progress.md` record; work runs one approved milestone at a time and resumes across sessions. |
+| [`/agentic-academy:goal-prompt-builder`](agentic-academy/skills/goal-prompt-builder) | You want Claude to **finish a job without babysitting** → a short interview, then one ready-to-run goal prompt with a proof-of-done list, guardrails, allowed sources, a next-move rule, and a stop clause. Tool-agnostic; adds `/goal` when your tool supports it. |
+| [`/agentic-academy:loop-framework-generator`](agentic-academy/skills/loop-framework-generator) | A **draft, page, brief, or spec that exists and needs to get better** → a loop-fit verdict first (it will send blank-page or judgment work back to a normal prompt or a goal), then a `/loop` prompt with a pass order, observable checker, pass cap, loop log, and human gate. |
 | [`/agentic-academy:memory-review`](agentic-academy/skills/memory-review) | **"What do you remember about me?"**, or a saved correction did not stick → a report of project and user-level memory, then one decision per stale, duplicated, or contradicted item for you to approve. Does not audit `CLAUDE.md`, rules, or skills. Needs `python3`. |
 | [`/agentic-academy:sync-skills`](agentic-academy/skills/sync-skills) | You want a project to **carry its own copies** of your installed skills → editable copies in that project's `.claude/skills/`. One-time copy; re-run to refresh. |
 

@@ -6,7 +6,8 @@ description: >-
   or describes a need without knowing which tool fits (getting set up, finding what to
   automate, creating or fixing project instructions, planning a build, creating skills, stopping
   repeated corrections, reviewing memory, building subagents, copying skills into a
-  project, auditing an existing CLAUDE.md or skills setup). Shows a plain-language menu, then hands off to the matching sibling skill in
+  project, auditing an existing CLAUDE.md or skills setup, writing a goal or loop prompt so
+  Claude finishes a job or improves an artifact without babysitting). Shows a plain-language menu, then hands off to the matching sibling skill in
   this plugin. If the student already names a specific Academy skill, let that skill handle
   it directly instead.
 ---
@@ -25,7 +26,7 @@ Help students describe what they need, choose a useful next step, and continue w
 
 ## The opening menu
 
-Use this introduction and keep the thirteen numbered options stable so students can reply with a number. Actual execution may require the student's files, tools, or app access.
+Use this introduction and keep the fourteen numbered options stable so students can reply with a number. Actual execution may require the student's files, tools, or app access.
 
 I can help you set up, build, and improve how you work with Claude Code. Here are the things we can work on:
 
@@ -42,6 +43,7 @@ I can help you set up, build, and improve how you work with Claude Code. Here ar
 11. **Review Claude's memory.** See what it remembers and review anything that may need updating.
 12. **Build specialist helpers.** Create subagents for defined tasks or a panel that reviews your work from different perspectives.
 13. **Bring your skills into a project.** Copy installed skills into a project folder so you can use them there.
+14. **Hand off a job and let it run.** Write a prompt with a real finish line and stop rules so Claude works to done without you watching, or improves an existing draft, page, or brief in checked passes.
 
 Pick a number, or describe what you want to do in your own words. If you're unsure, tell me what's slowing you down.
 
@@ -49,7 +51,7 @@ End the menu response there and wait for the student's choice. Do not choose an 
 
 ## Hand off to the chosen skill
 
-After a choice or specific request, read [references/routing-guide.md](references/routing-guide.md). It maps the thirteen options to the thirteen sibling skills and resolves overlapping requests.
+After a choice or specific request, read [references/routing-guide.md](references/routing-guide.md). It maps the fourteen options to the fifteen sibling skills and resolves overlapping requests.
 
 Gather only what changes the choice or is needed to start. Usually this is the target project folder, the available source material, or whether a plan already exists. Use the currently open project if it is clearly the intended target. Ask if several projects or plans could fit. Do not repeat the interview the chosen skill is about to conduct.
 

@@ -19,6 +19,7 @@ Read this after a student selects a menu item or gives a specific request. These
 | 11 | `agentic-academy:memory-review` | The student wants to see what Claude remembers, inspect stale or conflicting memories, or investigate a correction that was not remembered. | Existing Claude memory and user-level instructions become an audit proposal with one decision per finding; only approved changes are applied. |
 | 12 | `agentic-academy:subagent-builder` | The student wants a separate helper for a defined handoff, wants to discover useful helpers, or wants a review panel. | Project evidence and an interview become approved subagent files; panel mode also defines how a coordination skill combines their results. |
 | 13 | `agentic-academy:sync-skills` | The student wants installed skills copied into a specified project. | A verified accessible skill source and target folder become local copies. A copy operation, with no ongoing synchronization. |
+| 14 | `agentic-academy:goal-prompt-builder` or `agentic-academy:loop-framework-generator` | The student wants Claude to run a job without supervision. Goal: build or finish something end to end with a verifiable finish line. Loop: improve an artifact that already exists in repeated checked passes. | A short interview becomes one ready-to-run `/goal` or `/loop` prompt with proof of done, guardrails, a stop rule, and a human gate. Neither skill runs the job itself. |
 
 ## Resolve overlapping requests
 
@@ -37,6 +38,8 @@ Use `knowledge-worker-automation-recommender` for "What should I automate next?"
 If the student selects a new-skill recommendation from the broad review, carry its evidence into `skill-finder` and focus on the selected task.
 
 ### Planning and completing a project
+
+Option 7 and option 14 both handle big jobs, and the split is who stays in the loop. Use `plan-and-execute` when the student wants to plan it with you across sessions and approve one milestone at a time. Use `goal-prompt-builder` when they want to hand the whole job to Claude with a finish line and walk away. Use `loop-framework-generator` only when a real artifact already exists and the ask is "make this better" in passes; that skill sends anything earlier than that back to a normal prompt or a goal.
 
 Use `plan-and-execute` for option 7. If `plan.md` and `progress.md` already exist, that skill reads them and preserves the current plan and approval state. If the student brings a separate specification, clarify which document governs before creating or changing a plan. Never silently replace their specification or overwrite a progress record.
 

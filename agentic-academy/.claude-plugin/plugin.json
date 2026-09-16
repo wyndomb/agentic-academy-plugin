@@ -1,8 +1,8 @@
 {
   "name": "agentic-academy",
   "displayName": "Agentic Academy",
-  "version": "1.2.0",
-  "description": "The Agentic Academy toolkit for knowledge workers: set up a Claude Code project from your chat history or an interview, find what to automate next, create, improve, and audit project instructions, plan and build, create and audit skills, turn corrections into rules, review memory, build subagents, and copy skills into a project. Start with /agentic-academy:academy-guide.",
+  "version": "1.3.0",
+  "description": "The Agentic Academy toolkit for knowledge workers: set up a Claude Code project from your chat history or an interview, find what to automate next, create, improve, and audit project instructions, plan and build, create and audit skills, turn corrections into rules, review memory, build subagents, copy skills into a project, and write goal or loop prompts so Claude finishes a job or improves an artifact without babysitting. Start with /agentic-academy:academy-guide.",
   "author": {
     "name": "Wyndo",
     "url": "https://theaimaker.substack.com"
